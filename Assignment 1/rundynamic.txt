@@ -1,0 +1,9 @@
+rm *.o *.so *.a *.out
+gcc -Wall -fPIC -c settype.c
+gcc -Wall -fPIC -c setops.c
+gcc -shared -o libsetutils.so settype.o setops.o
+gcc -Wall chocolate.c -o chocolate.out -lsetutils -L.
+export LD_LIBRARY_PATH=.
+./chocolate.out
+gcc -Wall -DSTAT_MODE chocolate.c -o chocolate.out -lsetutils -L.
+./chocolate.out
