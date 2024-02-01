@@ -1,0 +1,9 @@
+cd lib
+make
+cd ../app
+gcc examples.c -Wall -L../lib -lrecrel -o examples.out
+./examples.out
+cd ../lib
+make distclean
+cd ../app
+rm -f examples.out
