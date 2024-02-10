@@ -1,0 +1,159 @@
+My roll number = 22CS10088
+
+Secret found = 548526
+
+
+
+Process: I set guess as all powers of 2 from 2^0 till 2^19 and run the program each time. Whenever 10 was obtained, the corresponding place in the binary secret number was set to 1, since it represents 1 bit closer to the 20 bit secret (hamming distance). Any other value (12 mostly) was set as 0. This gave the 20 bit secret in binary, which was then converted to its decimal form. The guess 0 was used to verify the total number of zeroes in the binary representation of secret.
+
+
+
+gdb command sequence:
+
+gdb ./guessit
+
+list
+
+list
+
+list
+
+break 22
+
+run 22CS10088
+
+set var guess = 0
+
+continue
+
+run 22CS10088
+
+set var guess = 1
+
+continue
+
+run 22CS10088
+
+set var guess = 2
+
+continue
+
+run 22CS10088
+
+set var guess = 4
+
+continue
+
+run 22CS10088
+
+set var guess = 8
+
+continue
+
+run 22CS10088
+
+set var guess = 16
+
+continue
+
+run 22CS10088
+
+set var guess = 32
+
+continue
+
+run 22CS10088
+
+set var guess = 64
+
+continue
+
+run 22CS10088
+
+set var guess = 128
+
+continue
+
+run 22CS10088
+
+set var guess = 256
+
+continue
+
+run 22CS10088
+
+set var guess = 512
+
+continue
+
+run 22CS10088
+
+set var guess = 1024
+
+continue
+
+run 22CS10088
+
+set var guess = 2048
+
+continue
+
+run 22CS10088
+
+set var guess = 4096
+
+continue
+
+run 22CS10088
+
+set var guess = 8196
+
+continue
+
+run 22CS10088
+
+set var guess = 16384
+
+continue
+
+run 22CS10088
+
+set var guess = 32768
+
+continue
+
+run 22CS10088
+
+set var guess = 65536
+
+continue
+
+run 22CS10088
+
+set var guess = 131072
+
+continue
+
+run 22CS10088
+
+set var guess = 262144
+
+continue
+
+run 22CS10088
+
+set var guess = 524288
+
+continue
+
+run 22CS10088
+
+set var guess = 548526
+
+continue
+
+quit
+
+
+
+NOTE: The binary number so obtained was converted to decimal and used as the correct secret number
